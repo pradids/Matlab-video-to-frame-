@@ -91,7 +91,7 @@ function frame_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 c=handles.a;
-mkdir('D:\pds\img');
+mkdir('D:\pradi\img');
 shuttleVideo = VideoReader(c);
 for ii = 1:shuttleVideo.NumberOfFrames
     img = read(shuttleVideo,ii);
@@ -100,7 +100,7 @@ imshow(img);
 
 %pause(0.3);
     % Write out to a JPEG file (img1.jpg, img2.jpg, etc.)
-    imwrite(img,fullfile('D:\pds\2',sprintf('img%d.jpg',ii)));
+    imwrite(img,fullfile('D:\pradi\2',sprintf('img%d.jpg',ii)));
 end
 
 
